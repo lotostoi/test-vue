@@ -4,7 +4,7 @@
     <input type="checkbox" id="camp1" value="camp1" v-model="picked">
     <div class="checkbox-square">
       <div class="square">
-        <img src="@i/campfilter.svg"  :class="{active:picked.indexOf('camp1') != -1}" alt="">
+        <img src="@/assets/img/filters/campfilter.svg"  :class="{active:picked.indexOf('camp1') != -1}" alt="">
       </div>
     </div>
     <label for="camp1">Адыл-Су</label>
@@ -13,7 +13,7 @@
       <input type="checkbox" id="camp2" value="camp2" v-model="picked" >
     <div class="checkbox-square">
       <div class="square">
-        <img src="@i/campfilter.svg"  :class="{active:picked.indexOf('camp2') != -1}" alt="">
+        <img src="@/assets/img/filters/campfilter.svg"  :class="{active:picked.indexOf('camp2') != -1}" alt="">
       </div>
     </div>
       <label for="camp2">Кязи</label>
@@ -22,7 +22,7 @@
     <input type="checkbox" id="camp3" value="camp3" v-model="picked">
     <div class="checkbox-square">
       <div class="square">
-        <img src="@i/campfilter.svg"  :class="{active:picked.indexOf('camp3') != -1}" alt="">
+        <img src="@/assets/img/filters/campfilter.svg"  :class="{active:picked.indexOf('camp3') != -1}" alt="">
       </div>
     </div>
     <label for="camp3">Дигория</label>
@@ -31,7 +31,7 @@
     <input type="checkbox" id="camp4" value="camp4" v-model="picked">
     <div class="checkbox-square">
       <div class="square">
-        <img src="@i/campfilter.svg" :class="{active:picked.indexOf('camp4') != -1}" alt="">
+        <img src="@/assets/img/filters/campfilter.svg" :class="{active:picked.indexOf('camp4') != -1}" alt="">
       </div>
     </div>
     <label for="camp4">Джан-Туган</label>
@@ -41,29 +41,29 @@
 
 <script>
 export default {
-  props:{
-    sign:{
+  props: {
+    sign: {
       type: Boolean,
       default: true
     },
-    pickedProp:{
+    pickedProp: {
       type: Array,
-      default: ['camp1','camp3']
+      default: ['camp1', 'camp3']
     }
   },
-  name: "campfilter",
+  name: 'campfilter',
   data () {
-    return{
+    return {
       picked: this.pickedProp,
       sign: this.sign,
       filterShow: true
     }
   },
-  watch:{
-    picked(){
+  watch: {
+    picked () {
       this.$emit('filtercamp', this.picked)
     },
-    pickedProp(){
+    pickedProp () {
       this.picked = this.pickedProp
     }
   }

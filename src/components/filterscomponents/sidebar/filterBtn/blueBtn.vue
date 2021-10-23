@@ -4,15 +4,15 @@
 
 <script>
 export default {
-name: "blueBtn",
-  data(){
+  name: 'blueBtn',
+  data () {
     return {
       onUse: true
     }
   },
   computed: {
     onUse () {
-     return this.$emit('onUse', this.onUse)
+      return this.$emit('onUse', this.onUse)
     }
   }
 }

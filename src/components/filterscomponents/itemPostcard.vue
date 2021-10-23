@@ -9,11 +9,11 @@
 
 <script>
 export default {
-name: "itemPostcard",
-  props:{
+  name: 'itemPostcard',
+  props: {
     value: {
       type: String,
-      default: "No filled"
+      default: 'No filled'
     },
     index: {
       type: Number,
@@ -23,10 +23,10 @@ name: "itemPostcard",
   data () {
     return {
       postcards: [
-        {index:'0', value: 'a'},
-        {index:'0', value: 'b'},
-        {index:'0', value: 'c'},
-        {index:'0', value: 'd'}
+        { index: '0', value: 'a' },
+        { index: '0', value: 'b' },
+        { index: '0', value: 'c' },
+        { index: '0', value: 'd' }
       ]
     }
   }

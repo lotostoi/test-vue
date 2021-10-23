@@ -4,9 +4,9 @@
   </div>
 </template>
 <script>
-import Takticsheader from "@/components/taktics-header";
+import Takticsheader from '@/components/taktics-header'
 export default {
-  components: {Takticsheader}
+  components: { Takticsheader }
 
 }
 </script>

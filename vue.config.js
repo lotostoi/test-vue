@@ -37,7 +37,7 @@ module.exports = {
       // .set('@r', path.resolve(__dirname, 'src/router'))
       // .set('@p', path.resolve(__dirname, 'src/views'))
       // .set('@api', path.resolve(__dirname, 'src/api'))
-      .set('@i', path.resolve(__dirname, 'src/assets/imgFilterPostcard/'))
+      .set('@i', path.resolve(__dirname, 'src/assets/filters/'))
       .set('@ic', path.resolve(__dirname, 'src/assets/imgcarousel/'))
     // .set('@a', path.resolve(__dirname, 'src/assets'))
     // .set('@config', path.resolve(__dirname, 'src/config'))

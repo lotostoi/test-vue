@@ -6,16 +6,16 @@
 </template>
 
 <script>
-import ItemPostcard from "@cf/itemPostcard";
+import ItemPostcard from '@cf/itemPostcard'
 export default {
-  components: {ItemPostcard},
+  components: { ItemPostcard },
   props: {
     index: {
       type: Number,
       default: 0
     }
   },
-    name: "postcardComponent"
+  name: 'postcardComponent'
 }
 </script>
 

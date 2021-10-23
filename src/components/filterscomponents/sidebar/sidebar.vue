@@ -3,8 +3,8 @@
 
     <div class="filter-title">
       <h3>Даты</h3>
-      <img id="date" class="arrow" :class="{active: show.indexOf('date') != -1}" src="@i/arrow_down.svg" alt="">
-      <img class="arrow" :class="{active:show.indexOf('date') == -1}" src="@i/arrow_up.svg" alt="">
+      <img id="date" class="arrow" :class="{active: show.indexOf('date') != -1}" src="@/assets/img/filters/arrow_down.svg" alt="">
+      <img class="arrow" :class="{active:show.indexOf('date') == -1}" src="@/assets/img/filters/arrow_up.svg" alt="">
       <input type="checkbox" class="hidden" value="date" v-model="show">
     </div>
 
@@ -17,8 +17,8 @@
 
     <div class="filter-title">
       <h3>Длительность</h3>
-      <img id="time" class="arrow" :class="{active: show.indexOf('time') != -1}" src="@i/arrow_down.svg" alt="">
-      <img class="arrow" :class="{active:show.indexOf('time') == -1}" src="@i/arrow_up.svg" alt="">
+      <img id="time" class="arrow" :class="{active: show.indexOf('time') != -1}" src="@/assets/img/filters/arrow_down.svg" alt="">
+      <img class="arrow" :class="{active:show.indexOf('time') == -1}" src="@/assets/img/filters/arrow_up.svg" alt="">
       <input type="checkbox" class="hidden" value="time" v-model="show">
     </div>
 
@@ -29,8 +29,8 @@
 
     <div class="filter-title">
       <h3>Альплагерь</h3>
-      <img id="camp" class="arrow" :class="{active: show.indexOf('camp') != -1}" src="@i/arrow_down.svg" alt="">
-      <img class="arrow" :class="{active:show.indexOf('camp') == -1}" src="@i/arrow_up.svg" alt="">
+      <img id="camp" class="arrow" :class="{active: show.indexOf('camp') != -1}" src="@/assets/img/filters/arrow_down.svg" alt="">
+      <img class="arrow" :class="{active:show.indexOf('camp') == -1}" src="@/assets/img/filters/arrow_up.svg" alt="">
       <input type="checkbox" class="hidden" value="camp" v-model="show">
     </div>
 
@@ -42,7 +42,7 @@
     <input class="blueBtn" type="button" value="Применить" @click="useFilter">
 
     <div class="cancelBtn">
-      <img src="@i/cancelBtn.svg" alt="">
+      <img src="@/assets/img/filters/cancelBtn.svg" alt="">
       <a href="#" @click="filterCancel">Сбросить</a>
     </div>
 
@@ -50,55 +50,55 @@
 </template>
 
 <script>
-import Datefilter from "@cf/sidebar/datefilter/datefilter";
-import Timefilter from "@cf/sidebar/timefilter/timefilter";
-import Campfilter from "@cf/sidebar/campfilter/campfilter";
+import Datefilter from '@cf/sidebar/datefilter/datefilter'
+import Timefilter from '@cf/sidebar/timefilter/timefilter'
+import Campfilter from '@cf/sidebar/campfilter/campfilter'
 
 export default {
-  components: {Datefilter, Timefilter, Campfilter},
-name: "sidebar",
-  data(){
-    return{
+  components: { Datefilter, Timefilter, Campfilter },
+  name: 'sidebar',
+  data () {
+    return {
       sign: false,
 
       filtertime: '',
-      filtercamp:[],
+      filtercamp: [],
       indate: '',
       ondate: '',
 
       onUse: true,
-      show: ['date','time','camp'],
+      show: ['date', 'time', 'camp'],
       hidden: true,
       active: true
     }
   },
-  methods:{
-    onfiltertime(time){
+  methods: {
+    onfiltertime (time) {
       console.log(time)
       this.filtertime = time
     },
-    onfiltercamp(camp){
+    onfiltercamp (camp) {
       console.log(camp)
       this.filtercamp = camp
     },
-    DateIn(indate){
+    DateIn (indate) {
       console.log(indate)
       this.indate = indate
     },
-    DateOn(ondate){
+    DateOn (ondate) {
       console.log(ondate)
       this.ondate = ondate
     },
-    useFilter(sign){
-     this.sign = true
+    useFilter (sign) {
+      this.sign = true
     },
-    filterCancel(sign){
+    filterCancel (sign) {
       this.sign = false
       this.filtertime = ''
       this.filtercamp = []
       this.indate = ''
       this.ondate = ''
-    },
+    }
   }
 }
 </script>

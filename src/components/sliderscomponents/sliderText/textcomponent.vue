@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "textcomponent"
+  name: 'textcomponent'
 }
 </script>
 

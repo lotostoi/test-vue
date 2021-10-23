@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import Filter from "@cv/Filter";
-import Sidebar from "@cf/sidebar/sidebar";
+import Filter from '@cv/Filter'
+import Sidebar from '@cf/sidebar/sidebar'
 export default {
-  name: "Filterpage",
-  components: {Filter, Sidebar},
+  name: 'Filterpage',
+  components: { Filter, Sidebar }
 }
 </script>
 

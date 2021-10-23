@@ -26,33 +26,33 @@
 
 <script>
 export default {
-  name: "timefilter",
-  props:{
-    sign:{
+  name: 'timefilter',
+  props: {
+    sign: {
       type: Boolean,
       default: true
     },
-    pickedProp:{
+    pickedProp: {
       type: String,
       default: 'week1'
     }
   },
   data () {
-    return{
+    return {
       picked: this.pickedProp,
       filterShow: true
     }
   },
-  mounted() {
+  mounted () {
     console.log(this.pickedProp)
   },
-  watch:{
-    picked(){
+  watch: {
+    picked () {
       this.$emit('filtertime', this.picked)
     },
-    pickedProp(){
-        this.picked = this.pickedProp
-     }
+    pickedProp () {
+      this.picked = this.pickedProp
+    }
   }
 }
 </script>

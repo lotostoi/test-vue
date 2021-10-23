@@ -8,26 +8,24 @@
 
 <script>
 export default {
-  name: "formA",
-  props:['input', 'name'],
-  data(){
-    return{
-     value:'',
+  name: 'formA',
+  props: ['input', 'name'],
+  data () {
+    return {
+      value: ''
     }
   },
-  methods:{
-    Show() {
+  methods: {
+    Show () {
       this.input.value = this.value
       if (this.input.value == '') {
-
-        this.input.styleInp = "style_input_danger"
-
-        } else if( this.input.styleInp == "style_input_danger" ){
-        this.input.styleInp = "style_input"
-        }
-      this.$emit('get-data',{ value: this.value, name: this.input.name})
-    },
-  },
+        this.input.styleInp = 'style_input_danger'
+      } else if (this.input.styleInp == 'style_input_danger') {
+        this.input.styleInp = 'style_input'
+      }
+      this.$emit('get-data', { value: this.value, name: this.input.name })
+    }
+  }
 }
 </script>
 

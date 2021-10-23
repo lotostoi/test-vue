@@ -9,10 +9,9 @@ import 'font-awesome/scss/font-awesome.scss'
 import 'animate.css'
 import Maska from 'maska'
 
-
 // store.dispatch('auth/checkUser')
 createApp(App)
-    .use(Maska)
-    // .use(store)
-    // .use(router)
-    .mount('#app')
+  .use(Maska)
+// .use(store)
+// .use(router)
+  .mount('#app')

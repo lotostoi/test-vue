@@ -9,14 +9,13 @@
 
 <script>
 
-import Filterpage from "@cf/Filterpage";
-import Slider from "@cv/Slider";
-import Map from "@cv/Maps";
-
+import Filterpage from '@cf/Filterpage'
+import Slider from '@cv/Slider'
+import Map from '@cv/Maps'
 
 export default {
   name: 'App',
-  components: { Filterpage, Slider, Map},
+  components: { Filterpage, Slider, Map }
 }
 </script>
 

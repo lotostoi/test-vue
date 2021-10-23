@@ -21,17 +21,17 @@
 
 <script>
 export default {
-   name: "datefilter",
-  props:{
-    sign:{
+  name: 'datefilter',
+  props: {
+    sign: {
       type: Boolean,
       default: true
     },
-    ondate:{
+    ondate: {
       type: String,
       default: ''
     },
-    indate:{
+    indate: {
       type: String,
       default: ''
     }
@@ -41,43 +41,43 @@ export default {
       dateIn: this.indate,
       dateOn: this.ondate,
       filterShow: true,
-      flag1:null,
-      flag2:null
+      flag1: null,
+      flag2: null
     }
   },
-  methods:{
-    valid(str){
-      let pat = new RegExp("^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$", "i")
+  methods: {
+    valid (str) {
+      const pat = new RegExp('^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$', 'i')
       return str.search(pat)
     }
   },
-  mounted() {
+  mounted () {
     console.log(this.indate)
   },
-  computed:{
-    dateStart(){
-      let pat = new RegExp("^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$", "i")
-      return !this.flag1  || pat.test(this.dateIn) ? '' : 'warning'
+  computed: {
+    dateStart () {
+      const pat = new RegExp('^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$', 'i')
+      return !this.flag1 || pat.test(this.dateIn) ? '' : 'warning'
     },
-    dateStop(){
-      let pat = new RegExp("^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$", "i")
-      return !this.flag2  || pat.test(this.dateOn) ? '' : 'warning'
+    dateStop () {
+      const pat = new RegExp('^(0?[1-9]|[12][0-9])[\.](0?[1-9]|1[012])$', 'i')
+      return !this.flag2 || pat.test(this.dateOn) ? '' : 'warning'
     }
   },
-  watch:{
-    dateIn(){
+  watch: {
+    dateIn () {
       this.flag1 = true
-      this.$emit('DateIn',this.dateIn)
+      this.$emit('DateIn', this.dateIn)
     },
-    dateOn(){
+    dateOn () {
       this.flag2 = true
-      this.$emit('DateOn',this.dateOn)
+      this.$emit('DateOn', this.dateOn)
     },
 
-    indate() {
+    indate () {
       this.dateIn = this.indate
     },
-    ondate(){
+    ondate () {
       this.dateOn = this.ondate
     }
   }

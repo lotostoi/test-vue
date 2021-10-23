@@ -1,15 +1,15 @@
 <template>
 <div class="cancelBtn">
-  <img src="../../../../../src/assets/imgFilterPostcard/cancelBtn.svg" alt="">
+  <img src="../../../../../src/assets/filters/cancelBtn.svg" alt="">
   <a href="#" @click="CancelFilter">Сбросить</a>
 </div>
 </template>
 
 <script>
 export default {
-  name: "cancelBtn",
-  methods:{
-    CancelFilter(){
+  name: 'cancelBtn',
+  methods: {
+    CancelFilter () {
       return this.$emit('cancelfilter')
     }
   }

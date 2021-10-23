@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import Mapcomponent from "@/components/mapcomponent/mapcomponent";
+import Mapcomponent from '@/components/mapcomponent/mapcomponent'
 export default {
-name: "Maps",
-  data(){
-    return{}
+  name: 'Maps',
+  data () {
+    return {}
   },
-  components:{Mapcomponent}
+  components: { Mapcomponent }
 }
 </script>
 

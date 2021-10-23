@@ -6,15 +6,14 @@
     <TextCompon></TextCompon>
   </div>
 
-
 </template>
 
 <script>
-import CarouselCompon from "@/components/sliderscomponents/componentCarousel";
-import TextCompon from "@/components/sliderscomponents/sliderText/textcomponent";
+import CarouselCompon from '@/components/sliderscomponents/componentCarousel'
+import TextCompon from '@/components/sliderscomponents/sliderText/textcomponent'
 export default {
-components: {CarouselCompon, TextCompon},
-  name: "Slider"
+  components: { CarouselCompon, TextCompon },
+  name: 'Slider'
 }
 </script>
 
@@ -57,6 +56,5 @@ components: {CarouselCompon, TextCompon},
     display: block;
   }
 }
-
 
 </style>

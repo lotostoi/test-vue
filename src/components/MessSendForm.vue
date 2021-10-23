@@ -7,8 +7,8 @@
 
 <script>
 export default {
-name: "MessSendForm",
-  props:['sendFlage'],
+  name: 'MessSendForm',
+  props: ['sendFlage']
 
 }
 </script>

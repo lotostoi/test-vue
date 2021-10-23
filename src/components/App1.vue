@@ -18,16 +18,17 @@
 </template>
 
 <script>
-import MessSendForm from "@/components/MessSendForm";
-import formA from "@/components/formA";
+import MessSendForm from '@/components/MessSendForm'
+import formA from '@/components/formA'
 
 export default {
   name: 'App',
-  components: {MessSendForm, formA},
-  data() {
+  components: { MessSendForm, formA },
+  data () {
     return {
       inputs: [
-        {styleInp: 'style_input',
+        {
+          styleInp: 'style_input',
           value: '',
           name: 'email',
           valid: false
@@ -38,65 +39,62 @@ export default {
           name: 'phone',
           valid: false
         },
-        {styleInp: 'style_input',
+        {
+          styleInp: 'style_input',
           value: '',
           name: 'firstName',
           valid: false
-        },
+        }
       ],
       regTel: /^\d+$/,
       regName: /^[а-яА-Яa-zA-Z_]+$/,
       regEm: /^\w+@+?/,
       sendFlage: true,
-      isAct: false,
+      isAct: false
     }
   },
   computed: {},
   methods: {
-    checkValid(inp){
+    checkValid (inp) {
       console.log(inp.value)
-      if((inp.name == 'email' ) && (inp.value)){
+      if ((inp.name == 'email') && (inp.value)) {
         return this.regEm.test(inp.value)
-      }
-      else if((inp.name == 'phone') && (inp.value)){
-        return this.regTel.test(inp.value)}
-      else if((inp.name == 'firstName') && (inp.value)){
+      } else if ((inp.name == 'phone') && (inp.value)) {
+        return this.regTel.test(inp.value)
+      } else if ((inp.name == 'firstName') && (inp.value)) {
         return this.regName.test(inp.value)
       }
     },
 
-    validFunc(data) {
+    validFunc (data) {
       console.log(data.value)
 
-      if (data.value){
+      if (data.value) {
         this.inputs.forEach(elem => {
-          if ((elem.name == data.name) && this.checkValid(elem)){
+          if ((elem.name == data.name) && this.checkValid(elem)) {
             elem.valid = true
           }
-
         })
       } else {
-        data.styleInp = "style_input_danger"
+        data.styleInp = 'style_input_danger'
       }
     },
 
-    SendData(e) {
+    SendData (e) {
       if (this.inputs.every(elem => elem.valid == true)) {
-
         this.sendFlage = true
         this.isAct = true
-
       } else {
         this.inputs.forEach(elem => {
-          if(elem.value == ''){
-            elem.styleInp = "style_input_danger"
+          if (elem.value == '') {
+            elem.styleInp = 'style_input_danger'
           }
         })
         this.sendFlage = false
         this.isAct = false
         e.preventDefault()
       }
-    },
+    }
   }
 }
 </script>

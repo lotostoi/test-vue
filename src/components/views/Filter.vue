@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import Postcards from "@cf/postcards";
+import Postcards from '@cf/postcards'
 export default {
   components: { Postcards },
-name: "Fillter"
+  name: 'Fillter'
 }
 </script>
 
